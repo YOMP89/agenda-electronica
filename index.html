@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Electrónica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agenda Electrónica</h1>
+    </header>
+    
+    <main>
+        <div class="calendar-container">
+            <div id="calendar"></div>
+            <div class="controls">
+                <button id="addEventBtn">Agregar Evento</button>
+                <select id="viewMode">
+                    <option value="daily">Diario</option>
+                    <option value="weekly">Semanal</option>
+                    <option value="monthly">Mensual</option>
+                </select>
+            </div>
+        </div>
+    </main>
+
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar/Editar Evento</h2>
+            <form id="eventForm">
+                <label for="eventTitle">Título del Evento</label>
+                <input type="text" id="eventTitle" name="eventTitle" required>
+                
+                <label for="eventDate">Fecha del Evento</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+                
+                <label for="eventTime">Hora del Evento</label>
+                <input type="time" id="eventTime" name="eventTime" required>
+                
+                <label for="eventReminder">Recordatorio</label>
+                <input type="checkbox" id="eventReminder" name="eventReminder">
+                
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
